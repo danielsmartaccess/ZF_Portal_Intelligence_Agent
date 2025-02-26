@@ -71,7 +71,7 @@ zf_portal_agent/
 ## Política de Privacidade
 
 Nossa política de privacidade está disponível em:
-https://danielsmartaccess.github.io/bocao/privacy-policy.html
+https://danielsmartaccess.github.io/ZF_Portal_Intelligence_Agent/privacy-policy.html
 
 ## Próximos Passos
 
