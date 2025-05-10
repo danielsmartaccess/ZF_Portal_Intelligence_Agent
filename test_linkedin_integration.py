@@ -30,7 +30,7 @@ sys.path.append(str(root_dir))
 # Importa os módulos necessários
 from src.utils.file_cache import FileCache
 from src.config.linkedin_config import LinkedInConfig
-from src.utils.selenium_setup import setup_webdriver, save_cookies, load_cookies
+from src.utils.selenium_setup import setup_webdriver, save_cookies_to_file as save_cookies, load_cookies_from_file as load_cookies
 
 def test_linkedin_config():
     """
