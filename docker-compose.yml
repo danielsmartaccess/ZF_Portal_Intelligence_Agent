@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  waha:
+    image: devlikeapro/whatsapp-http-api:latest
+    container_name: ${WAHA_CONTAINER_NAME:-zf-portal-waha}
+    restart: unless-stopped
+    ports:
+      - "${WAHA_PORT:-3000}:${WAHA_PORT:-3000}"
+    environment:
+      - PORT=${WAHA_PORT:-3000}
+      - API_KEY=${WAHA_API_KEY:-zf-portal-api-key}
+      - ENABLE_WEBHOOK=true
+      - WEBHOOK_URL=${WAHA_WEBHOOK_URL:-http://host.docker.internal:8000/api/v1/whatsapp/webhook}
+      - WEBHOOK_ALLOWED_EVENTS=*
+      - LOG_LEVEL=info
+    volumes:
+      - ./waha-data:/app/store
+
+  redis:
+    image: redis:alpine
+    container_name: ${REDIS_CONTAINER_NAME:-zf-portal-redis}
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - ./redis-data:/data
+    command: redis-server --appendonly yes
+
+networks:
+  default:
+    name: zf-portal-network

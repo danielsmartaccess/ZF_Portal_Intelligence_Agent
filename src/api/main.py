@@ -87,5 +87,21 @@ app.include_router(
     tags=["interacoes"]
 )
 
+# Incluir rotas de WhatsApp
+from .routes import whatsapp
+app.include_router(
+    whatsapp.router,
+    prefix=f"{settings.api_v1_prefix}/whatsapp",
+    tags=["whatsapp"]
+)
+
+# Incluir rotas de funil de marketing
+from .routes import funnel
+app.include_router(
+    funnel.router,
+    prefix=f"{settings.api_v1_prefix}/funnel",
+    tags=["funnel"]
+)
+
 if __name__ == "__main__":
     uvicorn.run("api.main:app", host="0.0.0.0", port=8000, reload=True)
