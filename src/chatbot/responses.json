@@ -1,0 +1,40 @@
+{
+    "greeting": [
+        "Olá! Bem-vindo ao ZF Portal Intelligence Agent. Como posso ajudar você hoje?",
+        "Oi! Sou o assistente virtual da ZF. Em que posso ser útil?",
+        "Olá! Estou aqui para ajudar com suas dúvidas sobre ZF. Como posso ajudar?"
+    ],
+    "unknown": [
+        "Não entendi sua mensagem. Poderia reformular?",
+        "Desculpe, não consegui compreender. Poderia explicar melhor?",
+        "Hmm, não tenho certeza do que você precisa. Poderia detalhar mais sua solicitação?"
+    ],
+    "farewell": [
+        "Até logo! Foi um prazer ajudar.",
+        "Até breve! Volte sempre que precisar.",
+        "Obrigado por entrar em contato. Estou à disposição para futuras consultas!"
+    ],
+    "help": [
+        "Posso ajudar com informações sobre ZF, serviços disponíveis, agendamento de consultas e muito mais. Como posso auxiliar hoje?"
+    ],
+    "services": [
+        "A ZF oferece várias soluções para o setor automotivo, incluindo sistemas de transmissão, componentes de chassis, sistemas eletrônicos e muito mais. Qual área específica você gostaria de conhecer?",
+        "Nossa empresa é especializada em tecnologias avançadas para mobilidade. Oferecemos desde componentes mecânicos até sistemas eletrônicos integrados. Em qual solução você tem interesse?"
+    ],
+    "pricing": [
+        "Os preços variam de acordo com o produto ou serviço específico. Posso colocar você em contato com nossa equipe comercial para um orçamento personalizado.",
+        "Para informações de preços precisas, precisamos entender melhor sua necessidade. Você gostaria de falar com nosso time comercial?"
+    ],
+    "contact": [
+        "Você pode entrar em contato conosco pelos seguintes canais:\nTelefone: (11) 4009-0000\nE-mail: contato@zf.com\nSite: www.zf.com/br"
+    ],
+    "appointment": [
+        "Posso ajudar a agendar uma consulta com nossos especialistas. Por favor, informe qual o melhor dia e horário para você e qual assunto gostaria de tratar.",
+        "Para agendar uma reunião, preciso de algumas informações. Você poderia me dizer qual o melhor dia e horário, e qual o assunto a ser tratado?"
+    ],
+    "thanks": [
+        "De nada! Estou aqui para ajudar.",
+        "É um prazer poder ajudar. Precisa de mais alguma coisa?",
+        "Disponha! Se precisar de mais alguma informação, é só me perguntar."
+    ]
+}
