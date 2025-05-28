@@ -28,17 +28,14 @@ class ChatbotService:
     Serviço para gerenciar o chatbot WhatsApp
     """
     
-    def __init__(self, 
-                waha_url: str = "http://localhost:3000", 
-                api_key: str = "zf-portal-api-key", 
-                session_name: str = "zf-portal"):
+    def __init__(self, waha_url: str = "http://localhost:3000", api_key: str = "zf-portal-api-key", session_name: str = "default"):
         """
         Inicializa o serviço de chatbot
         
         Args:
             waha_url: URL do servidor WAHA (padrão: http://localhost:3000)
             api_key: Chave API para autenticação com WAHA (padrão: zf-portal-api-key)
-            session_name: Nome da sessão WhatsApp (padrão: zf-portal)
+            session_name: Nome da sessão WhatsApp (padrão: default)
         """
         self.waha_url = waha_url
         self.api_key = api_key
@@ -55,13 +52,12 @@ class ChatbotService:
         
         # Registrar handlers para mensagens
         self._register_message_handlers()
-        
-        # Estado da sessão
+          # Estado da sessão
         self.is_connected = False
     
     def _register_message_handlers(self):
         """Registra handlers para processar mensagens"""
-        self.message_handler.add_text_handler(self._process_text_message)
+        self.message_handler.add_message_handler("text", self._process_text_message)
     
     def _process_text_message(self, message_data: Dict[str, Any]) -> bool:
         """

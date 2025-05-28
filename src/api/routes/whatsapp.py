@@ -8,7 +8,7 @@ import logging
 
 from ..deps import get_db
 from ..auth import get_current_active_user, User
-from ... import schemas
+from ..schemas import *  # Corrigido: importando schemas a partir do módulo api
 from ...database.marketing_repository import WhatsAppRepository
 from ...whatsapp.whatsapp_session_manager import WhatsAppSessionManager
 from ...whatsapp.whatsapp_message_handler import WhatsAppMessageHandler

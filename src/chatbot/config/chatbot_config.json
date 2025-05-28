@@ -1,25 +1,7 @@
-{
-    "waha_url": "http://localhost:3000",
+{    "waha_url": "http://localhost:3000",
     "api_key": "zf-portal-api-key",
-    "session": "zf-portal",
+    "session": "default",
     "log_conversations": true,
     "save_contacts": true,
-    "use_llm": false,
-    "responses": {
-        "greeting": [
-            "Olá! Bem-vindo ao ZF Portal Intelligence Agent. Como posso ajudar você hoje?",
-            "Olá! Sou o assistente virtual da ZF. Em que posso ser útil?"
-        ],
-        "farewell": [
-            "Até logo! Foi um prazer ajudar.",
-            "Até breve! Estamos à disposição quando precisar."
-        ],
-        "unknown": [
-            "Desculpe, não entendi sua mensagem. Poderia reformular?",
-            "Não consegui compreender. Como posso ajudar você hoje?"
-        ],
-        "help": [
-            "Posso ajudar com informações sobre nossos produtos e serviços, agendamentos, orçamentos e muito mais. O que você precisa?"
-        ]
-    }
+    "use_llm": false
 }

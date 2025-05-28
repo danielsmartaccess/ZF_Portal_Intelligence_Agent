@@ -34,7 +34,7 @@ load_dotenv()
 # Configurações padrão
 DEFAULT_WAHA_URL = os.getenv("WAHA_URL", "http://localhost:3000")
 DEFAULT_API_KEY = os.getenv("WAHA_API_KEY", "zf-portal-api-key")
-DEFAULT_SESSION = os.getenv("WAHA_SESSION", "zf-portal")
+DEFAULT_SESSION = os.getenv("WAHA_SESSION", "default")
 
 
 def show_qr_code(qr_code: str):
