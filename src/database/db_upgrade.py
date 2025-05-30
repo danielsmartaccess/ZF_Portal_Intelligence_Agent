@@ -42,10 +42,9 @@ class WhatsAppMessage(Base):
     message_type = Column(String(20), nullable=False)  # text, image, document, audio, video, etc.
     content = Column(Text)
     media_url = Column(String)
-    status = Column(String(20))  # sent, delivered, read, replied, failed
-    timestamp = Column(DateTime, default=datetime.now)
+    status = Column(String(20))  # sent, delivered, read, replied, failed    timestamp = Column(DateTime, default=datetime.now)
     response_to = Column(Integer, ForeignKey('whatsapp_messages.id'))
-    metadata = Column(JSON)  # Dados adicionais da mensagem em formato JSON
+    message_metadata = Column(JSON)  # Dados adicionais da mensagem em formato JSON
     
     # Relacionamentos
     contato = relationship("Contato", back_populates="whatsapp_messages")
@@ -97,7 +96,7 @@ class FunnelActivity(Base):
     previous_value = Column(String(50))
     new_value = Column(String(50))
     created_at = Column(DateTime, default=datetime.now)
-    metadata = Column(JSON)
+    activity_metadata = Column(JSON)
     
     # Relacionamentos
     funnel_contact = relationship("FunnelContact", back_populates="activities")
